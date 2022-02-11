@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div > p {
+        border: 1px solid red;
+        height: 100px;
+      }
+    </style>
+    <script>
+      function bonjour() {
+        document.querySelector(
+          "div:first-of-type > p:first-of-type"
+        ).innerHTML = "Bonjour";
+        console.log("bouton 1");
+      }
+
+      window.onload = function () {
+        document
+          .querySelector("div:first-of-type button:nth-of-type(2)")
+          .addEventListener("click", bonjour, false);
+        /*
+            document.querySelector("div:first-of-type button:nth-of-type(3)").addEventListener("click", function(){
+                document.querySelector("div:first-of-type > p:first-of-type").innerHTML = "Hello !";
+            });
+            */
+
+        document.querySelector("div:first-of-type").addEventListener(
+          "click",
+          function () {
+            document.querySelector(
+              "div:first-of-type > p:first-of-type"
+            ).innerHTML = "Hello sur la DIV !";
+          },
+          false
+        );
+      };
+    </script>
+  </head>
+
+  <body>
+    <div>
+      <p></p>
+      <button onclick="bonjour();">Ajouter</button>
+      <button>Ajouter v2</button>
+      <!--         <button>Ajouter v3</button> -->
+    </div>
+  </body>
+</html>

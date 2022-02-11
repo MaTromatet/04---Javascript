@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>ExoParentNode</title>
+    <script>
+      /*
+      function ColorerCelluleRouge() {
+        document.querySelector(
+          "body > div:nth-of-type(1) > table:nth-of-type(1) > tbody:nth-of-type(1) > tr:nth-of-type(1) > td:nth-of-type(3)"
+        ).style.backgroundColor = "red";
+      }
+      function ColorerLigneRouge() {
+        document.querySelector(
+          "body > div:nth-of-type(1) > table:nth-of-type(1) > tbody:nth-of-type(1) > tr:nth-of-type(2) "
+        ).style.backgroundColor = "red";
+      }
+*/
+      window.onload = function () {
+        const boutonCellule = document.getElementById("boutonCellule");
+
+        boutonCellule.addEventListener("click", colorCell);
+      };
+
+      function colorCell() {
+        boutonCellule.parentNode.style.backgroundColor = "red";
+      }
+
+      const boutonLigne = document.getElementById("boutonLigne");
+    </script>
+  </head>
+  <body>
+    <div>
+      <table>
+        <tr>
+          <td>cell 1.1</td>
+          <td>cell 1.2</td>
+          <!--<td><button onclick="ColorerCelluleRouge()">cellule</button></td>-->
+          <td><button id="boutonCellule">cellule</button></td>
+        </tr>
+        <tr>
+          <td>cell 2.1</td>
+          <td>cell 2.2</td>
+          <!--<td><button onclick="ColorerLigneRouge()">ligne 2</button>/> </td>-->
+          <td><button id="boutonLigne">ligne 2</button></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+body div > table {
+  border-collapse: separate;
+  height: 150px;
+  width: 300px;
+}
+
+body div > table > tbody > tr > td {
+  border: 1px solid blue;
+  text-align: center;
+}
+/*# sourceMappingURL=styles.css.map */
