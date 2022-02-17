@@ -1,13 +1,13 @@
-window.onload = function () {
+/* window.onload = function () {
   Telecommande.colorPolice = document.querySelector(
     '#telecommande input[name="couleur"]:checked'
   ).value;
-};
+}; */
 
 var Telecommande = {
   //Propriété
   // colorPolice : document.querySelector('#telecommande input[name="couleur"]:checked'),
-  colorPolice: "",
+  colorPolice: "black",
 
   //Setters
   setColor: function (color) {
@@ -24,7 +24,7 @@ var Telecommande = {
     return Array.from(document.querySelectorAll("#tableau tr td"));
   },
 
-  getAllFullCases: function (table) {
+  getAllFilledCases: function (table) {
     return table.filter((el) => el.innerHTML !== "");
   },
 
@@ -42,9 +42,18 @@ var Telecommande = {
     this.SetNbColor(this.getColor(), 1);
   },
 
+  fillAllCases: function (table) {
+    table.forEach((element) => {
+      this.fillCase(element);
+    });
+  },
+
   SetNbColor: function (color, number) {
     var cptColor;
-    if (document.querySelector("#nb_" + color).innerHTML == "") {
+    if (
+      document.querySelector("#nb_" + color).innerHTML == "" ||
+      document.querySelector("#nb_" + color).innerHTML == null
+    ) {
       cptColor = 0;
     } else {
       cptColor = document.querySelector("#nb_" + color).innerHTML;
@@ -58,41 +67,37 @@ var Telecommande = {
     }
   },
 
-  fillAllCases: function (table) {
-    table.forEach((element) => {
-      this.fillCase(element);
-    });
-  },
-
   addId: function () {
     document.querySelector("#nb_black").innerHTML = "";
     document.querySelector("#nb_red").innerHTML = "";
     document.querySelector("#nb_blue").innerHTML = "";
     document.querySelector("#nb_green").innerHTML = "";
 
-    console.log("La couleur défault est " + this.colorPolice);
+    //  console.log("La couleur défault est " + this.colorPolice);
     this.fillAllCases(this.getAllCases());
   },
 
   delAleatoire: function () {
-    var FullCasesTable = this.getAllFullCases(this.getAllCases());
-    var NbCasesToErase = Math.floor(FullCasesTable.length / 2);
+    var filledCasesTable = this.getAllFilledCases(this.getAllCases());
+    var nbCasesToErase = Math.floor(filledCasesTable.length / 2);
     var Cell;
 
-    for (i = 0; i < NbCasesToErase; i++) {
-      Cell = this.getRandomElement(FullCasesTable);
+    for (i = 0; i < nbCasesToErase; i++) {
+      Cell = this.getRandomElement(filledCasesTable);
       Cell.textContent = "";
       this.SetNbColor(Cell.style.color, -1);
 
-      FullCasesTable = this.getAllFullCases(FullCasesTable);
+      filledCasesTable = this.getAllFilledCases(filledCasesTable);
     }
   },
 
   firstCase: function () {
     table = this.getAllEmptyCases(this.getAllCases());
-
+    table.sort(function (a, b) {
+      return a.id > b.id;
+    });
     if (table[0] != undefined) {
-      this.fillCase(table[table.length - 1]);
+      this.fillCase(table[0]);
     }
   },
 
