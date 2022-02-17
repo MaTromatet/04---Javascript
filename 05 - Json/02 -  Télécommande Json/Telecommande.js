@@ -93,12 +93,18 @@ var Telecommande = {
 
   firstCase: function () {
     table = this.getAllEmptyCases(this.getAllCases());
-    table.sort(function (a, b) {
+    /*     table.sort(function (a, b) {
       return a.id > b.id;
     });
     if (table[0] != undefined) {
       this.fillCase(table[0]);
+    } */
+    if (table.length > 0) {
+      table.sort(function (a, b) {
+        return a.id > b.id;
+      });
     }
+    console.log(table);
   },
 
   addIdDansVide: function () {
