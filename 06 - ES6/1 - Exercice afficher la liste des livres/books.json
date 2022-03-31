@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Numérique et Sciences informatiques 1re",
+    "description": "Prépabac: nouveau programme de Première 2019-2020",
+    "imageUrl": "https://philippe.afpa-balma.fr/ng/images/nsi1ere.jpg",
+    "text": "Un outil de travail complet et efficace, conforme au programme en 1re du nouvel enseignement de spécialité «  Numérique et sciences informatiques  ». De nombreuses ressources  – le cours, les méthodes clés, des exercices progressifs –, pour vous accompagner tout au long de votre Première.",
+    "price": "12.9"
+  },
+  {
+    "title": "J'apprends à programmer tout seul",
+    "description": "Nouveau programme 2016",
+    "imageUrl": "https://philippe.afpa-balma.fr/ng/images/programmerseul.jpg",
+    "text": "Le 1er cahier pour s'initier à la logique et au code informatique à la maison. Ce cahier propose de familiariser les enfants avec les principes du code informatique, et de leur en faire saisir l'utilité, par le biais d'activités simples et ludiques, menées sans ordinateur ni tablette !",
+    "price": "9.99"
+  },
+  {
+    "title": "Les réseaux informatiques",
+    "description": "Guide pratique pour l'administration et la supervision",
+    "imageUrl": "https://philippe.afpa-balma.fr/ng/images/reseaux.jpg",
+    "text": "Ce livre sur les réseaux informatiques s'adresse aussi bien aux administrateurs réseau, techniciens ou ingénieurs en charge de la conception, de l'administration et de la mise en place de solutions de supervision d'un réseau, qu'aux étudiants souhaitant disposer de connaissances théoriques et techniques nécessaires pour exercer le métier d'administrateur réseau au sens large. En s'appuyant sur les standards définis par l'IEEE ou l'IETF, l'auteur propose au lecteur un guide opérationnel alliant toute...",
+    "price": "39.0"
+  },
+  {
+    "title": "Python 3",
+    "description": "Les fondamentaux du langage (3e édition)",
+    "imageUrl": "https://philippe.afpa-balma.fr/ng/images/python3.jpg",
+    "text": "Ce livre sur les fondamentaux du langage Python 3 (en version 3.8 beta au moment de l'écriture) s'adresse à tout professionnel de l'informatique, ingénieur, étudiant (et particulièrement en BTS Services Informatiques Organisations), enseignant ou même autodidacte, qui souhaite maîtriser ce langage très abouti. Il couvre un périmètre relativement large, détaille tout le coeur du langage et du traitement de données et ouvre des perspectives importantes sur tout ce que Python 3 permet de faire (de la création d'un site web au développement de jeux en passant par la conception d'une interface graphique avec Gtk)...",
+    "price": "38.9"
+  }
+]
